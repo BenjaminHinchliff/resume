@@ -20,6 +20,7 @@ In addition to packages, [Roboto](https://fonts.google.com/specimen/Roboto) font
 ## License
 
 Copyright 2023 Benjamin Hinchliff
+
 This work may be distributed and/or modified under the conditions of the [LaTeX Project Public License](https://www.latex-project.org/lppl/lppl-1-3c/), either version 1.3 of this license any later version.
 
 ## Acknowledgements
