@@ -15,15 +15,30 @@
 \begin{document}
 \section{Experience}
 
+\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun 2025 \textendash{} Sept 2025}{
+  \begin{tightlist}
+  \item Continued to work on M2020 (Perseverance) Rover Simulation Software (RSVP Suite)
+  \item Developed custom stereo processing pipeline to experiment with usage of more advanced stereo matching algorithms in operations
+    \begin{itemize}
+      \item For prototyping purposes, uses OpenCV's implementation of semi-global matching (still an improvement in quality over existing sum-of-absolute difference algorithm (SAD5) used by JPLV)
+      \item Matching algorithm is highly configurable and can be swapped out entirely with relative ease
+      \item Processes disparity into mesh (using Poisson Reconstruction) data and heightmap for usage in simulation/verification
+    \end{itemize}
+  \item Added \href{https://lookingglassfactory.com/}{Looking Glass} support to enhance stereo viewer (QARD)
+    \begin{itemize}
+      \item Driver incompatibilities with RHEL8 (LG only supports Ubuntu) forced support via websocket to another host using reverse engineered protocol
+    \end{itemize}
+  \end{tightlist}
+}
 
-\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Part Time)}{Oct 2023 \textendash{} Present}{
+\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Part Time)}{Oct 2023 \textendash{} Jun 2024}{
   \begin{tightlist}
   \item Brought on part time after internship
   \item Working to continue Development on Mars Rover Simulation Software
   \end{tightlist}
 }
 
-\combosection{NASA Jet Propulsion Laboratory}{Intern (Full Time)}{June \textendash{} Sept 2023}{
+\combosection{Caltech}{NASA Jet Propulsion Laboratory Intern (Full Time)}{June \textendash{} Sept 2023}{
   \begin{tightlist}
   \item Worked to Develop and Maintain Mars Rover Simulation Software (RSVP Suite)
   \item Ported simulation software from RedHat Enterprise Linux (RHEL) 7 to RHEL 8
@@ -43,13 +58,13 @@
   \end{tightlist}
 }
 
-\combosection{\href{https://www.venadvisory.com}{VenAdvisory}}{Software Developer}{June \textendash{} Sept. 2020}{
-  \begin{tightlist}
-  \item Built WordPress (PHP) front-end and back-end to create new transcripts for customer analysis
-  \item Identified and fixed security issues including Cross Site Scripting and SQL Injection
-  \item Gained professional experience working with an offshore development team
-  \end{tightlist}
-}
+% \combosection{\href{https://www.venadvisory.com}{VenAdvisory}}{Software Developer}{June \textendash{} Sept. 2020}{
+%   \begin{tightlist}
+%   \item Built WordPress (PHP) front-end and back-end to create new transcripts for customer analysis
+%   \item Identified and fixed security issues including Cross Site Scripting and SQL Injection
+%   \item Gained professional experience working with an offshore development team
+%   \end{tightlist}
+% }
 
 \section{Projects Examples}
 Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminhinchliff.com/projects}
@@ -62,12 +77,12 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \end{tightlist}
 }
 
-\combosection{\href{https://www.benjaminhinchliff.com}{Portfolio Website} (\href{https://github.com/BenjaminHinchliff/4neo4finch}{Source})}{Svelte(kit), SSR, HTML, SCSS, TS, JS, Vite}{}{
-  \begin{tightlist}
-  \item Uses SSR and caching techniques to (optionally) work without JS
-  \item Compact, using a production framework and a real build system
-  \end{tightlist}
-}
+% \combosection{\href{https://www.benjaminhinchliff.com}{Portfolio Website} (\href{https://github.com/BenjaminHinchliff/4neo4finch}{Source})}{Svelte(kit), SSR, HTML, SCSS, TS, JS, Vite}{}{
+%   \begin{tightlist}
+%   \item Uses SSR and caching techniques to (optionally) work without JS
+%   \item Compact, using a production framework and a real build system
+%   \end{tightlist}
+% }
 
 \combosection{\href{https://benjaminhinchliff.github.io/dungeonator-demo}{Dungeonator} (\href{https://github.com/BenjaminHinchliff/dungeonator}{Source})}{C99, CMake, C++17, Catch2 (for tests), doxygen (for docs)}{}{
   \begin{tightlist}
@@ -81,23 +96,24 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
 \section{Skills}
 \combosection{Programming}{}{}{
   \begin{tightlist}
-  \item Computer Science Fundamentals - e.g. Data Structures and Algorithms
-  \item C/C++ (7+ years) - STL, OOP, API development, Boost C++, Qt, GTK, FLTK, Template Metaprogramming
-  \item Web Development (6+ years) - React, Vue, Svelte, jQuery, vanilla JS 
-  \item Rust (4+ years) - Ownership, Lifetimes, Effecient Multithreading
-  \item Other (3+ years) - SQL, Python, Rust, Assembly (x86 \& x86\_64)
-  \item Other (1+ years) - Zig, Assembly (arm64)
+  \item Arduino C++ \& MicroPython - microcontroller programming
+  \item Simulation and kinematics modeling Fundamentals
+  \item Computer Science Fundamentals - e.g. Data Structures, Algorithms, Theory
+  \item C, Zig - Comfortable with very low level programming
+  \item C++ - STL, OOP, API development, Boost C++, Qt, GTK, FLTK, Template Metaprogramming
+  \item Rust - Ownership, Lifetimes, Effecient Multithreading
+  \item Other - SQL, Python, Assembly (x86\_64 \& arm64)
+  \item Web Development - React, Vue, Svelte, jQuery, vanilla JS 
   \end{tightlist}
 }
 
 \combosection{Tools/Others}{}{}{
   \begin{tightlist}
-  \item Scripting(Bash, Python), git, CI/CD (Github Actions \& Jenkins), Linux/Unix (X11 \& Wayland), Windows
-  \item \LaTeX, (Neo)Vim, Visual Studio Code, IntelliJ IDEA, Visual Studio, Microsoft Office / LibreOffice
+  \item Scripting (Bash, Python), git, CI/CD (Github Actions \& Jenkins), Linux/Unix, \LaTeX, vim/nano, VS(Code)
   \end{tightlist}
 }
 
 \section{Education}
-\combosection{California Polytechnic State University, San Luis Obispo (Cal Poly)}{B.S. Computer Science}{2025}{GPA 3.85 (President's Honors List)}
+\combosection{California Polytechnic State University, San Luis Obispo (Cal Poly)}{B.M.S. Computer Science}{2025}{GPA 3.85 (President's Honors List)}
 
 \end{document}
