@@ -5,14 +5,18 @@
 
 \title{Benjamin's CV}
 \fullname{Benjamin}{Hinchliff}{}
-\cvtitle{Cal Poly CS Student \& Multitalented Programmer}
+\cvtitle{Experienced and Versatile Computer Scientist}
 \website{https://www.benjaminhinchliff.com}{benjaminhinchliff.com}
 \email{benjamin.hinchliff@gmail.com}
 \github{https://github.com/BenjaminHinchliff}{BenjaminHinchliff}
 \linkedin{https://www.linkedin.com/in/benjamin-hinchliff-15b125180}{LinkedIn}
-\currentdate{21 September 2023}
+\currentdate{\date}
 
 \begin{document}
+
+\section{Education}
+\combosection{California Polytechnic State University, San Luis Obispo}{B.S./M.S. Computer Science}{Dec 2025}{GPA 3.96 (President's Honors List)}
+
 \section{Experience}
 
 \combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun 2024 \textendash{} Sept 2024}{
@@ -20,9 +24,9 @@
   \item Continued to work on M2020 (Perseverance) Rover Simulation Software (RSVP Suite)
   \item Developed custom stereo processing pipeline to experiment with usage of more advanced stereo matching algorithms in operations
     \begin{itemize}
-      \item For prototyping purposes, uses OpenCV's implementation of semi-global matching (still an improvement in quality over existing sum-of-absolute difference algorithm (SAD5) used by JPLV)
-      \item Matching algorithm is highly configurable and can be swapped out entirely with relative ease
+      \item For prototyping purposes, uses OpenCV's implementation of semi-global matching (a moderate improvement over existing sum-of-absolute difference algorithm (SAD5) used by JPLV)
       \item Processes disparity into mesh (using Poisson Reconstruction) data and heightmap for usage in simulation/verification
+      \item Modular pipeline allowing for changing matchng and reconstruction algorithms
     \end{itemize}
   \item Added \href{https://lookingglassfactory.com/}{Looking Glass} support to enhance stereo viewer (QARD)
     \begin{itemize}
@@ -33,8 +37,7 @@
 
 \combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Part Time)}{Oct 2023 \textendash{} Jun 2024}{
   \begin{tightlist}
-  \item Brought on part time after internship
-  \item Working to continue Development on Mars Rover Simulation Software
+  \item Brought on part time after internship to continue RSVP development
   \end{tightlist}
 }
 
@@ -49,12 +52,7 @@
 
 \combosection{\href{https://www.versational.ai}{Versational}}{Full-stack Software Developer}{June \textendash{} Sept. 2021}{
   \begin{tightlist}
-  \item Created dashboard for the consumer analytics platform Versational
-  \item Built platform integration with AssemblyAI transcription API, front-end and back-end
-  \item Connected speakers to user accounts
   \item Assisted development of Deep Learning "Gems" identification models based on BERT
-  \item Integrated the machine learning “Gems” identification models into the platform and dashboard
-  \item Fixed bugs throughout the platform, such as credential leakage to the frontend
   \end{tightlist}
 }
 
@@ -77,6 +75,23 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \end{tightlist}
 }
 
+\combosection{\href{https://github.com/BenjaminHinchliff/BanjOS}{BanjOS}}{C11, x86\_64 Asm, GRUB Bootloader}{}{
+  \begin{tightlist}
+    \item Minimal x86\_64 operating system written from scratch targeting the QEMU emulator
+    \item Supports features including: VGA console output, interrupts \& interrupt driven keyboard \& serial drivers, dynamic memory allocation with on-demand paging (physical, virtual, \& kmalloc), cooperative multitasking, and Ext2 file reading
+  \end{tightlist}
+}
+
+\combosection{\href{https://github.com/BenjaminHinchliff/csc470-balatrobot}{Reinforcement Learning BalatroBot Experiments}}{Pytorch}{}{
+  \begin{tightlist}
+    \item Full report in the \href{https://github.com/BenjaminHinchliff/csc470-balatrobot/blob/main/REPORT.pdf}{Balatrobot repository}
+    \item Experiments with building a reinforcement learning agent for Balatro
+    \item Based on an extended version Balatrobot botting framework for the Balatro game
+    \item Communicates with a Pytorch model over websockets to send commands to Balatro mod
+    \item Learned simple hand combinations and performed moderately better than baseline
+  \end{tightlist}
+}
+
 % \combosection{\href{https://www.benjaminhinchliff.com}{Portfolio Website} (\href{https://github.com/BenjaminHinchliff/4neo4finch}{Source})}{Svelte(kit), SSR, HTML, SCSS, TS, JS, Vite}{}{
 %   \begin{tightlist}
 %   \item Uses SSR and caching techniques to (optionally) work without JS
@@ -84,13 +99,13 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
 %   \end{tightlist}
 % }
 
-\combosection{\href{https://benjaminhinchliff.github.io/dungeonator-demo}{Dungeonator} (\href{https://github.com/BenjaminHinchliff/dungeonator}{Source})}{C99, CMake, C++17, Catch2 (for tests), doxygen (for docs)}{}{
-  \begin{tightlist}
-  \item Small and lightweight library for procedural dungeon generation
-  \item Code written entirely in standards-compliant C99
-  \item Fully documented: \href{https://benjaminhinchliff.github.io/dungeonator}{benjaminhinchliff.github.io/dungeonator}
-  \end{tightlist}
-}
+% \combosection{\href{https://benjaminhinchliff.github.io/dungeonator-demo}{Dungeonator} (\href{https://github.com/BenjaminHinchliff/dungeonator}{Source})}{C99, CMake, C++17, Catch2 (for tests), doxygen (for docs)}{}{
+%   \begin{tightlist}
+%   \item Small and lightweight library for procedural dungeon generation
+%   \item Code written entirely in standards-compliant C99
+%   \item Fully documented: \href{https://benjaminhinchliff.github.io/dungeonator}{benjaminhinchliff.github.io/dungeonator}
+%   \end{tightlist}
+% }
 
 \vspace{\topsep}
 \section{Skills}
@@ -99,11 +114,8 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \item Arduino C++ \& MicroPython - microcontroller programming
   \item Simulation and kinematics modeling Fundamentals
   \item Computer Science Fundamentals - e.g. Data Structures, Algorithms, Theory
-  \item C, Zig - Comfortable with very low level programming
-  \item C++ - STL, OOP, API development, Boost C++, Qt, GTK, FLTK, Template Metaprogramming
-  \item Rust - Ownership, Lifetimes, Effecient Multithreading
-  \item Other - SQL, Python, Assembly (x86\_64 \& arm64)
-  \item Web Development - React, Vue, Svelte, jQuery, vanilla JS 
+  \item C, C++, Python, Haskell - Comfortable with a broad range of languages
+  \item Web Development - React, Vue, Svelte, jQuery, vanilla JS, etc
   \end{tightlist}
 }
 
@@ -112,8 +124,5 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \item Scripting (Bash, Python), git, CI/CD (Github Actions \& Jenkins), Linux/Unix, \LaTeX, vim/nano, VS(Code)
   \end{tightlist}
 }
-
-\section{Education}
-\combosection{California Polytechnic State University, San Luis Obispo (Cal Poly)}{B.M.S. Computer Science}{2025}{GPA 3.85 (President's Honors List)}
 
 \end{document}
