@@ -3,44 +3,50 @@
 
 \usepackage[english]{babel}
 
-\title{Benjamin's CV}
+\title{\comcv@firstname{} \comcv@lastname{} Résumé}
 \fullname{Benjamin}{Hinchliff}{}
-\cvtitle{Experienced and Versatile Computer Scientist}
-\website{https://www.benjaminhinchliff.com}{benjaminhinchliff.com}
-\email{benjamin.hinchliff@gmail.com}
+\cvtitle{Computer Scientist Specializing in Computer Vision, Simulation, and Space Robotics}
+\website{https://www.benjaminhinchliff.com}{benhinchliff.com}
+\email{ben.hinchliff@pm.me}
 \github{https://github.com/BenjaminHinchliff}{BenjaminHinchliff}
 \linkedin{https://www.linkedin.com/in/benjamin-hinchliff-15b125180}{LinkedIn}
+\phone{tel:+15105429478}{+1 (510) 542-9478}
 \currentdate{\date}
 
 \begin{document}
 
 \section{Education}
-\combosection{California Polytechnic State University, San Luis Obispo}{B.S./M.S. Computer Science}{Dec 2025}{GPA 3.96 (President's Honors List)}
+\combosection{California Polytechnic State University, San Luis Obispo}{M.S. Computer Science}{Dec 2025}{
+    Thesis: \href{https://digitalcommons.calpoly.edu/theses/3201}{MarsAnywhere: Dataset and Cross-view Diffusion Model for Satellite-to-Ground View Synthesis with Mars Data}
+}
+\combosection{California Polytechnic State University, San Luis Obispo}{B.S. Computer Science}{Jun 2024}{
+    GPA 3.88 / 4.00 \textemdash{} Summa Cum Laude, President's Honors List
+}
 
-\section{Experience}
+\section{Work Experience}
 
-\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun 2025 \textendash{} Sept 2025}{
+\combosection{Caltech}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun \textendash{} Sept 2025}{
   \begin{tightlist}
-  \item Developed RSVPLite telemetry backend to allow storage of future mission telemetry in arbitrary databases, such as TimescaleDB or SQLite
-  \item Created machine learning model to predict for Perseverance rover slippage from orbital imagery and rover tilt data
+  \item Developed RSVPLite telemetry backend to allow storage of Mars Sample Return mission telemetry in arbitrary databases, such as TimescaleDB or SQLite
+  \item Created experimental machine learning model for Perseverance rover slippage from overhead imagery and rover tilt data
   \end{tightlist}
 }
 
-\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun 2024 \textendash{} Sept 2024}{
+\combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun \textendash{} Sept 2024}{
   \begin{tightlist}
   \item Continued to work on M2020 (Perseverance) Rover Simulation Software (RSVP Suite)
-  \item Developed custom stereo processing pipeline to experiment with usage of more advanced stereo matching algorithms in operations
-  \item Added \href{https://lookingglassfactory.com/}{Looking Glass} support to enhance stereo viewer (QARD)
+  \item Developed custom stereo processing pipeline to experiment with usage of more advanced stereo matching algorithms in rover operations
+  \item Added optional \href{https://lookingglassfactory.com/}{Looking Glass} support to enhance stereo viewer (QARD)
   \end{tightlist}
 }
 
 \combosection{ANRE Technologies}{NASA Jet Propulsion Laboratory Intern (Part Time)}{Oct 2023 \textendash{} Jun 2024}{
   \begin{tightlist}
-  \item Brought on part time after internship to continue RSVP development
+  \item Performed large scale codebase refactor to migrate from Qt4 signal connection semantics to Qt5, enhancing compile time error checks
   \end{tightlist}
 }
 
-\combosection{Caltech}{NASA Jet Propulsion Laboratory Intern (Full Time)}{June \textendash{} Sept 2023}{
+\combosection{Caltech}{NASA Jet Propulsion Laboratory Intern (Full Time)}{Jun \textendash{} Sept 2023}{
   \begin{tightlist}
   \item Worked to Develop and Maintain Mars Rover Simulation Software (RSVP Suite)
   \item Ported simulation software from RedHat Enterprise Linux (RHEL) 7 to RHEL 8
@@ -49,7 +55,7 @@
   \end{tightlist}
 }
 
-\combosection{\href{https://www.versational.ai}{Versational}}{Full-stack Software Developer}{June \textendash{} Sept. 2021}{
+\combosection{\href{https://www.versational.ai}{Versational}}{Full-stack Software Developer}{Jun \textendash{} Sept 2021}{
   \begin{tightlist}
   \item Assisted development of Deep Learning "Gems" identification models based on BERT
   \end{tightlist}
@@ -63,16 +69,25 @@
 %   \end{tightlist}
 % }
 
-\section{Projects Examples}
+\section{Representative Projects}
 Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminhinchliff.com/projects}
 
-\combosection{\href{https://github.com/BenjaminHinchliff/raytrace-webgpu}{WebGPU Accelerated Raytracer}}{C++20, CMake, Dawn}{}{
+\combosection{\href{https://digitalcommons.calpoly.edu/theses/3201}{MarsAnywhere: Diffusion for Satellite-to-Ground View Synthesis for Mars}}{PyTorch, SpiceyPy}{}{
   \begin{tightlist}
-  \item A GPU accelerated Raytracer based on Google's Dawn WebGPU implementation
-  \item Supports creation of scenes program side
-  \item multiple primitives and materials supported using dynamically generated WGSL shaders
+    \item Diffusion based machine learning model for synthesis of ground view mars imagery from satellite overhead imagery
+    \item Dataset curated and processed from HiRISE Mars orbiter overhead imagery and Perseverance rover ground imagery
+    \item Controlnet model based on Stable Diffusion 2.1 with overhead imagery projected as viewed from the ground as input
+    \item Able to produce realistic ground view imagery for the Jezero crater region of Mars (where the Perseverance rover is)
   \end{tightlist}
 }
+
+% \combosection{\href{https://github.com/BenjaminHinchliff/raytrace-webgpu}{WebGPU Accelerated Raytracer}}{C++20, CMake, Dawn}{}{
+%   \begin{tightlist}
+%   \item A GPU accelerated Raytracer based on Google's Dawn WebGPU implementation
+%   \item Supports creation of scenes program side
+%   \item multiple primitives and materials supported using dynamically generated WGSL shaders
+%   \end{tightlist}
+% }
 
 \combosection{\href{https://github.com/BenjaminHinchliff/BanjOS}{BanjOS}}{C11, x86\_64 Asm, GRUB Bootloader}{}{
   \begin{tightlist}
@@ -81,12 +96,11 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \end{tightlist}
 }
 
-\combosection{\href{https://github.com/BenjaminHinchliff/csc470-balatrobot}{Reinforcement Learning BalatroBot Experiments}}{Pytorch}{}{
+\combosection{\href{https://github.com/BenjaminHinchliff/csc470-balatrobot/blob/main/REPORT.pdf}{Reinforcement Learning Balatro Agent}}{PyTorch}{}{
   \begin{tightlist}
-    \item Full report in the \href{https://github.com/BenjaminHinchliff/csc470-balatrobot/blob/main/REPORT.pdf}{Balatrobot repository}
-    \item Experiments with building a reinforcement learning agent for Balatro
+    \item Prototype reinforcement learning agent for Balatro
     \item Based on an extended version Balatrobot botting framework for the Balatro game
-    \item Communicates with a Pytorch model over websockets to send commands to Balatro mod
+    \item Communicates with a Pytorch model over websockets to send commands to Balatro
     \item Learned simple hand combinations and performed moderately better than baseline
   \end{tightlist}
 }
@@ -114,13 +128,13 @@ Full (uncurated) list at \href{https://benjaminhinchliff.com/projects}{benjaminh
   \item Simulation and kinematics modeling Fundamentals
   \item Computer Science Fundamentals - e.g. Data Structures, Algorithms, Theory
   \item C, C++, Python, Haskell - Comfortable with a broad range of languages
-  \item Web Development - React, Vue, Svelte, jQuery, vanilla JS, etc
+  \item Web Development - JavaScript, React, Vue, Svelte, and jQuery
   \end{tightlist}
 }
 
 \combosection{Tools/Others}{}{}{
   \begin{tightlist}
-  \item Scripting (Bash, Python), git, CI/CD (Github Actions \& Jenkins), Linux/Unix, \LaTeX, vim/nano, VS(Code)
+  \item Scripting (Bash, Python), git, CI/CD (GitHub Actions \& Jenkins), Linux/Unix, \LaTeX, (n)vim, VS(Code)
   \end{tightlist}
 }
 

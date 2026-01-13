@@ -9,7 +9,7 @@
 % and version 1.3 or later is part of all distributions of LaTeX
 % version 2005/12/01 or later.
 
-% class options 
+% class options
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{comcv}[2021/01/21 Compact CV]
 
@@ -43,7 +43,7 @@
 \definecolor{gray}{HTML}{555555} % color gray
 \definecolor{lightgray}{HTML}{999999} % color light gray, a shade of gray
 \definecolor{black}{HTML}{000000} % color black, also gray just deeper
-\definecolor{mutedorange}{HTML}{b74000} % color coral pink, ever seen a real coral, huh 
+\definecolor{mutedorange}{HTML}{b74000} % color coral pink, ever seen a real coral, huh
 
 % provide colors to your elements
 \colorlet{defaulttext}{black} % default text color
@@ -68,27 +68,27 @@
 ]{Roboto-Light.ttf}
 
 \newfontfamily\regular[
-    Path = fonts/, 
+    Path = fonts/,
     Color=regulartext
 ]{Roboto-Regular.ttf}
 
 \newfontfamily\light[
-    Path = fonts/, 
+    Path = fonts/,
     Color=regulartext
 ]{Roboto-Light.ttf}
 
 \newfontfamily\thin[
-    Path = fonts/, 
+    Path = fonts/,
     Color=defaulttext
 ]{Roboto-Thin.ttf}
 
 \newfontfamily\regularheader[
-    Path = fonts/, 
+    Path = fonts/,
     Color=headertext
 ]{Roboto-Regular.ttf}
 
 \newfontfamily\thinheader[
-    Path = fonts/, 
+    Path = fonts/,
     Color=headertext
 ]{Roboto-Thin.ttf}
 
@@ -110,15 +110,17 @@
 
 \newcommand*{\linkedin}[2]{\def\comcv@linkedinurl{#1}\def\comcv@linkedintext{#2}} % linkedin
 
+\newcommand*{\phone}[2]{\def\comcv@phonenum{#1}\def\comcv@phonetext{#2}} % linkedin
+
 \newcommand\horbar[1][]{\noindent\makebox[\linewidth]{\color{gray}\rule{\paperwidth}{0.4pt}}} % unindented horizontal line
 
 % link colors
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=linktext}}
 
 % redefining some commands
-\titlespacing{\section}{0pt}{0pt}{0pt} % remove space around sections
+\titlespacing{\section}{0pt}{2pt}{0pt} % remove space around sections
 \titleformat{\section}{
-    \fontsize{14pt}{16pt}\thinheader\bfseries\uppercase 
+    \fontsize{14pt}{16pt}\regularheader\bfseries\uppercase
 }{}{0pt}{}
 
 
@@ -150,7 +152,7 @@
     }
 
     \def\comcv@email{\faEnvelope~\href{mailto:\comcv@mailid}{\comcv@mailid}}
-    
+
     \ifdefined\comcv@linkedinurl
     \ifx\comcv@linkedinurl\empty
         \def\comcv@linkedin{}
@@ -160,7 +162,7 @@
     \else
         \def\comcv@linkedin{}
     \fi
-    
+
     \ifdefined\comcv@githuburl
     \ifx\comcv@githuburl\empty
         \def\comcv@github{}
@@ -170,7 +172,7 @@
     \else
         \def\comcv@github{}
     \fi
-    
+
     \ifdefined\comcv@websiteurl
     \ifx\comcv@websiteurl\empty
         \def\comcv@website{}
@@ -181,9 +183,19 @@
         \def\comcv@website{}
     \fi
 
+    \ifdefined\comcv@phonenum
+    \ifx\comcv@phonenum\empty
+        \def\comcv@phone{}
+    \else
+        \def\comcv@phone{\faPhone~\href{\comcv@phonenum}{\comcv@phonetext}}
+    \fi
+    \else
+        \def\comcv@phone{}
+    \fi
+
     \begin{center}
         % define your header text size, color and format
-        \fontsize{35pt}{45pt}\thinheader\comcv@firstname~\regularheader\comcv@lastname
+        \fontsize{35pt}{45pt}\regularheader\comcv@firstname~\regularheader\comcv@lastname
         \ifx\comcv@degree\empty% do nothing in case of empty degree
         \else
             \thinheader,~\comcv@degree
@@ -191,7 +203,7 @@
 
         \ifdefined\comcv@title
         \ifx\comcv@title\empty
-            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin~~\comcv@phone
             \vspace{-\topsep}
             \horbar
             \vspace{-\topsep}
@@ -200,16 +212,16 @@
             \vspace{-\topsep}
             \horbar
 
-            \comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin~~\comcv@phone
             \vspace{-\topsep}
         \fi
         \else
-            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin~~\comcv@phone
             \vspace{-\topsep}
             \horbar
             \vspace{-\topsep}
         \fi
-    
+
     \end{center}
 }
 
@@ -221,7 +233,7 @@
 \AtBeginDocument{
     \pagestyle{fancy}
     \fancyhead{}
-    \fancyfoot[C]{\footnotesize\light\comcv@firstname's Résumé, \comcv@date, \comcv@email} % footer text
+    \fancyfoot[C]{\footnotesize\light\comcv@firstname{} \comcv@lastname{} Résumé, \comcv@date, \comcv@email} % footer text
     \fancyfoot[R]{\raggedleft\footnotesize\comcv@page} % page number and page link
     \renewcommand{\headrulewidth}{0em}
     \setlength\footskip{\baselineskip}
