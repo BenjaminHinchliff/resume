@@ -44,12 +44,13 @@
 \definecolor{lightgray}{HTML}{999999} % color light gray, a shade of gray
 \definecolor{black}{HTML}{000000} % color black, also gray just deeper
 \definecolor{mutedorange}{HTML}{b74000} % color coral pink, ever seen a real coral, huh
+\definecolor{linkblue}{HTML}{1f45c2}
 
 % provide colors to your elements
 \colorlet{defaulttext}{black} % default text color
 \colorlet{regulartext}{gray} % regular text color
 \colorlet{headertext}{gray} % header text color
-\colorlet{linktext}{mutedorange} % link text volor
+\colorlet{linktext}{linkblue} % link text color
 \colorlet{lighttext}{lightgray} % light text color
 
 % hyperref options for generating pdf, metadata
@@ -241,6 +242,12 @@
 
 \newenvironment{tightlist}{
     \vspace{-6mm}
+    \begin{tightitemize}
+}{
+    \end{tightitemize}
+}
+
+\newenvironment{tightitemize}{
     \begin{itemize}
         \itemsep1pt
         \parskip0pt
